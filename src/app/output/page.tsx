@@ -1,0 +1,349 @@
+'use client';
+
+import React from 'react';
+
+export default function Output() {
+  const outputChannels = [
+    {
+      id: 'github',
+      title: 'GitHub 开源贡献',
+      icon: '🐙',
+      description: '通过开源项目建立技术影响力',
+      benefits: [
+        '展示技术能力与代码质量',
+        '获得社区认可与反馈',
+        '建立个人技术品牌',
+        '提升代码审查能力'
+      ],
+      strategies: [
+        '贡献知名开源项目',
+        '维护个人开源项目',
+        '编写技术文档',
+        '参与开源社区讨论'
+      ],
+      timeline: {
+        '2025 Q1': '开始贡献小型项目',
+        '2025 Q3': '维护个人开源项目',
+        '2026 Q1': '成为知名项目维护者',
+        '2027': '建立开源项目生态'
+      },
+      metrics: ['Star 数量', 'Fork 数量', 'Issue 解决', 'PR 合并']
+    },
+    {
+      id: 'blog',
+      title: '技术博客写作',
+      icon: '✍️',
+      description: '通过技术文章分享知识与经验',
+      benefits: [
+        '梳理技术知识体系',
+        '建立技术影响力',
+        '获得写作与表达能力',
+        '吸引职业机会'
+      ],
+      strategies: [
+        '定期发布技术文章',
+        '分享项目实践经验',
+        '技术趋势分析',
+        '教程与指南编写'
+      ],
+      timeline: {
+        '2025 Q1': '每周发布 1 篇文章',
+        '2025 Q3': '建立个人技术博客',
+        '2026 Q1': '获得技术媒体转载',
+        '2027': '出版技术书籍'
+      },
+      metrics: ['文章数量', '阅读量', '评论互动', '转载次数']
+    },
+    {
+      id: 'podcast',
+      title: '技术播客',
+      icon: '🎙️',
+      description: '通过音频形式分享技术见解',
+      benefits: [
+        '提升口头表达能力',
+        '扩大影响力范围',
+        '建立行业人脉',
+        '获得商业合作机会'
+      ],
+      strategies: [
+        '录制技术分享内容',
+        '邀请行业专家访谈',
+        '技术趋势讨论',
+        '职业发展建议'
+      ],
+      timeline: {
+        '2025 Q2': '开始录制技术分享',
+        '2025 Q4': '建立播客频道',
+        '2026 Q2': '获得商业赞助',
+        '2027': '成为行业知名播客'
+      },
+      metrics: ['节目数量', '收听量', '订阅数', '商业合作']
+    },
+    {
+      id: 'opensource',
+      title: '开源项目维护',
+      icon: '🔧',
+      description: '创建和维护有价值的开源项目',
+      benefits: [
+        '解决实际问题',
+        '获得用户反馈',
+        '提升项目管理能力',
+        '建立技术权威'
+      ],
+      strategies: [
+        '识别市场需求',
+        '设计优秀架构',
+        '编写完善文档',
+        '积极社区维护'
+      ],
+      timeline: {
+        '2025 Q2': '发布第一个开源项目',
+        '2025 Q4': '获得 100+ Star',
+        '2026 Q2': '获得 1000+ Star',
+        '2027': '成为知名开源项目'
+      },
+      metrics: ['项目数量', 'Star 数量', '下载量', '社区活跃度']
+    },
+    {
+      id: 'ebook',
+      title: '电子书出版',
+      icon: '📚',
+      description: '通过书籍形式系统化输出知识',
+      benefits: [
+        '系统化知识体系',
+        '获得版税收入',
+        '建立专家地位',
+        '扩大影响力'
+      ],
+      strategies: [
+        '确定写作主题',
+        '制定写作计划',
+        '寻求出版社合作',
+        '营销推广策略'
+      ],
+      timeline: {
+        '2025 Q3': '开始写作规划',
+        '2026 Q1': '完成初稿',
+        '2026 Q3': '出版发行',
+        '2027': '获得畅销书地位'
+      },
+      metrics: ['销量', '评分', '读者反馈', '版税收入']
+    },
+    {
+      id: 'conference',
+      title: '技术会议演讲',
+      icon: '🎤',
+      description: '通过技术会议分享专业见解',
+      benefits: [
+        '提升演讲能力',
+        '建立行业人脉',
+        '获得职业机会',
+        '提升个人品牌'
+      ],
+      strategies: [
+        '准备高质量演讲内容',
+        '参加知名技术会议',
+        '建立演讲者品牌',
+        '获得邀请演讲机会'
+      ],
+      timeline: {
+        '2025 Q4': '参加本地技术会议',
+        '2026 Q2': '在知名会议演讲',
+        '2026 Q4': '获得邀请演讲',
+        '2027': '成为知名演讲者'
+      },
+      metrics: ['演讲次数', '观众数量', '评分反馈', '邀请机会']
+    }
+  ];
+
+  const contentLeverage = {
+    title: '内容杠杆策略',
+    description: '通过多种渠道最大化内容价值',
+    strategies: [
+      {
+        name: '一鱼多吃',
+        description: '同一内容适配多种形式',
+        examples: ['技术文章 → 播客 → 视频 → 演讲']
+      },
+      {
+        name: '平台矩阵',
+        description: '在不同平台建立影响力',
+        examples: ['GitHub + 博客 + 知乎 + 掘金 + 公众号']
+      },
+      {
+        name: '社区建设',
+        description: '围绕内容建立活跃社区',
+        examples: ['技术交流群 + 开源社区 + 读者俱乐部']
+      },
+      {
+        name: '商业变现',
+        description: '将影响力转化为商业价值',
+        examples: ['咨询顾问 + 培训课程 + 技术合作']
+      }
+    ]
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            输出路径
+          </h1>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            通过多种渠道建立技术影响力，实现知识价值最大化
+          </p>
+        </div>
+
+        {/* Output Channels Grid */}
+        <div className="grid md:grid-cols-2 gap-8 mb-20">
+          {outputChannels.map((channel) => (
+            <div
+              key={channel.id}
+              className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-slate-700"
+            >
+              {/* Channel Header */}
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="text-4xl">{channel.icon}</div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                    {channel.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    {channel.description}
+                  </p>
+                </div>
+              </div>
+
+              {/* Benefits */}
+              <div className="mb-6">
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-3">
+                  核心价值
+                </h4>
+                <div className="space-y-2">
+                  {channel.benefits.map((benefit, index) => (
+                    <div key={index} className="flex items-center">
+                      <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                      <span className="text-sm text-gray-600 dark:text-gray-300">{benefit}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Strategies */}
+              <div className="mb-6">
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-3">
+                  实施策略
+                </h4>
+                <div className="space-y-2">
+                  {channel.strategies.map((strategy, index) => (
+                    <div key={index} className="flex items-center">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                      <span className="text-sm text-gray-600 dark:text-gray-300">{strategy}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Timeline */}
+              <div className="mb-6">
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-3">
+                  发展时间线
+                </h4>
+                <div className="space-y-2">
+                  {Object.entries(channel.timeline).map(([time, goal]) => (
+                    <div key={time} className="flex items-center justify-between">
+                      <span className="text-sm font-medium text-blue-600 dark:text-blue-400">{time}</span>
+                      <span className="text-sm text-gray-600 dark:text-gray-300">{goal}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Metrics */}
+              <div>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-3">
+                  关键指标
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {channel.metrics.map((metric, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-xs"
+                    >
+                      {metric}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Content Leverage Strategy */}
+        <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-slate-700">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              {contentLeverage.title}
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300">
+              {contentLeverage.description}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {contentLeverage.strategies.map((strategy, index) => (
+              <div key={index} className="bg-gray-50 dark:bg-slate-700 rounded-xl p-6">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                  {strategy.name}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  {strategy.description}
+                </p>
+                <div className="space-y-2">
+                  {strategy.examples.map((example, exampleIndex) => (
+                    <div key={exampleIndex} className="flex items-center">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                      <span className="text-sm text-gray-600 dark:text-gray-300">{example}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Output Success Formula */}
+        <div className="mt-16 text-center">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">
+              输出成功公式
+            </h3>
+            <p className="text-xl mb-6">
+              持续输出 × 质量保证 × 平台矩阵 × 社区建设 = 技术影响力
+            </p>
+            <div className="grid md:grid-cols-4 gap-4 text-sm">
+              <div>
+                <div className="font-bold mb-2">持续输出</div>
+                <div>保持稳定的内容产出节奏</div>
+              </div>
+              <div>
+                <div className="font-bold mb-2">质量保证</div>
+                <div>确保内容的价值和实用性</div>
+              </div>
+              <div>
+                <div className="font-bold mb-2">平台矩阵</div>
+                <div>在多个平台建立影响力</div>
+              </div>
+              <div>
+                <div className="font-bold mb-2">社区建设</div>
+                <div>围绕内容建立活跃社区</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+} 
