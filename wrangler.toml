@@ -1,0 +1,12 @@
+name = "dev-odyssey"
+compatibility_date = "2024-01-01"
+
+[build]
+command = "npm run build"
+output_directory = "out"
+
+[build.environment]
+NODE_VERSION = "18"
+
+[site]
+bucket = "out" 
