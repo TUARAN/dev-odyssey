@@ -128,6 +128,33 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* 作者信息 */}
+      <section className="py-12 border-t border-gray-200 dark:border-slate-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl p-8 max-w-2xl mx-auto">
+              <div className="flex items-center justify-center space-x-3 mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">掘</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                    by 掘金安东尼
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    技术布道师 · 开发者成长导师
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                致力于帮助开发者建立系统化的成长路径，从技术新手到行业专家的完整跃迁指南。
+                让我们一起在技术的海洋中探索，在代码的世界里成长。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 } 
