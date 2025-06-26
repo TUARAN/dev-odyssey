@@ -4,8 +4,8 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 
 export const metadata: Metadata = {
-  title: 'Dev Odyssey',
-  description: '2025-2027成长路线图 | 开发者成长路径与技术跃迁计划',
+  title: 'AI Agent 技术奥德赛',
+  description: '面对AI Agent浪潮，普通开发者的成长跃迁指南 | 三阶段系统化成长路径',
 };
 
 export default function RootLayout({

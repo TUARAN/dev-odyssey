@@ -24,13 +24,13 @@ export default function Navbar() {
   };
 
   const navItems = [
-    { href: '/', label: 'Overview' },
-    { href: '/phase1', label: 'Phase 1' },
-    { href: '/phase2', label: 'Phase 2' },
-    { href: '/phase3', label: 'Phase 3' },
-    { href: '/study-plan', label: 'Study Plan' },
-    { href: '/output', label: 'Output' },
-    { href: '/mindset', label: 'Mindset' },
+    { href: '/', label: '首页' },
+    { href: '/phase1', label: '阶段一' },
+    { href: '/phase2', label: '阶段二' },
+    { href: '/phase3', label: '阶段三' },
+    { href: '/study-plan', label: '学习计划' },
+    { href: '/output', label: '实战项目' },
+    { href: '/mindset', label: '成长思维' },
   ];
 
   return (
@@ -40,10 +40,10 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">DO</span>
+              <span className="text-white font-bold text-sm">AI</span>
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Dev Odyssey
+              AI Agent 技术奥德赛
             </span>
           </Link>
 
